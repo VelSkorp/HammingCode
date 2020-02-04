@@ -5,34 +5,54 @@ namespace HammingCode
 {
     class Program
     {
-        private static string Message;
-        private static string BinaryErrorMessage;
-        private static string BinaryMessage;
-        private static Coder coder;
-        private static Decoder decoder;
-
         static void Main()
         {
-            Console.WriteLine("Введите сообщение");
-            Message = Console.ReadLine();
-            StringToBinary(Message);
-            coder = new Coder(BinaryMessage);
-
-            SendErrorMessage();
+            Console.WriteLine("вуберите режим: code(кодировать), decode(декодировать), debug(отладка)");
+            string mode = Console.ReadLine();
+            if (mode == "code")
+            {
+                Console.WriteLine("Введите сообщение");
+                string Message = Console.ReadLine();
+                string BinaryMessage = StringToBinary(Message);
+                Coder coder = new Coder(BinaryMessage);
+                Console.WriteLine("закодированное сообщение: {0}",coder.GetMessage);
+                Console.WriteLine("контрольные значения: {0}",coder.GetContrValues);
+            }
+            else if (mode == "decode")
+            {
+                Console.Write("Введите закодированное сообщение: ");
+                string BinMsgContrBit = Console.ReadLine();
+                Console.Write("Введите контрольные значения: ");
+                string ContrValues = Console.ReadLine();
+                Decoder decoder = new Decoder(BinMsgContrBit, ContrValues);
+            }
+            else if (mode == "debug")
+            {
+                Console.WriteLine("Введите сообщение");
+                string Message = Console.ReadLine();
+                string BinaryMessage = StringToBinary(Message);
+                Coder coder = new Coder(BinaryMessage);
+                SendErrorMessage(coder);
+            }
+            else
+                Console.WriteLine("Неверно введен режим работы");
 
             Console.ReadKey();
         }
 
-        private static void StringToBinary(string message)
+        private static string StringToBinary(string message)
         {
-            byte[] MessageCode = Encoding.UTF8.GetBytes(Message);
+            string BinaryMessage="";
+            byte[] MessageCode = Encoding.UTF8.GetBytes(message);
             for (int i = 0; i < MessageCode.Length; i++)
-                BinaryMessage += Convert.ToString(MessageCode[i], 2).PadLeft(8,'0');
+                 BinaryMessage += Convert.ToString(MessageCode[i], 2).PadLeft(8,'0');
+            return BinaryMessage;
         }
 
-        private static void SendErrorMessage()
+        private static void SendErrorMessage(Coder coder)
         {
-            BinaryErrorMessage = coder.GetMessage;
+            Decoder decoder;
+            string BinaryErrorMessage = coder.GetMessage;
             Console.WriteLine();
             Console.WriteLine("В каком бите ошибка (none - без ошибки)");
             string Error = Console.ReadLine();

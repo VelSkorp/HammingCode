@@ -6,7 +6,7 @@ namespace HammingCode
     {
         private static string BinMsgContrBit;
         private static string ContrValues;
-        private static int[] ArrayOfPow = new int[8];
+        private static int[] ArrayOfPow = new int[20];
 
         public Coder()//for decoder
         {
@@ -15,7 +15,7 @@ namespace HammingCode
 
         public Coder(string BinaryMessage)//for get binary code from message
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 20; i++)
                 if (BinaryMessage.Length >= (int)Math.Pow(2, i))
                     ArrayOfPow[i] = (int)Math.Pow(2, i);
 
@@ -67,7 +67,7 @@ namespace HammingCode
             char[] LineX = new char[BinMsgContrBit.Length];
             int Pow;
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Pow = (int)Math.Pow(2, i);
                 if (BinMsgContrBit.Length > Pow)

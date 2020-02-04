@@ -6,6 +6,8 @@ namespace HammingCode
 {
     class Decoder
     {
+        private static string Message = "";
+
         public Decoder(string BinMsgContrBit, string ContrValues)
         {
             Console.WriteLine();
@@ -43,7 +45,6 @@ namespace HammingCode
 
         private static void BinToChar(string BinMsgContrBit)
         {
-            string Message="";
             int Pow = 0;
             for (int i = 0; i < BinMsgContrBit.Length; i++)
                 if (i!=Math.Pow(2,Pow)-1)
@@ -62,6 +63,10 @@ namespace HammingCode
             Console.WriteLine(Message);
         }
 
-
+        public string GetMessage
+        {
+            get { return Message; }
+        }
+        
     }
 }
