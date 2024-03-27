@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.779
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammingCode", "HammingCode\HammingCode.csproj", "{84CA8292-C299-4F1E-AC70-137A547F46C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammingCode", "HammingCode\HammingCode.csproj", "{B8F1ACF0-83D8-49F2-8B2B-C1F174B41C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84CA8292-C299-4F1E-AC70-137A547F46C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84CA8292-C299-4F1E-AC70-137A547F46C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84CA8292-C299-4F1E-AC70-137A547F46C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84CA8292-C299-4F1E-AC70-137A547F46C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F1ACF0-83D8-49F2-8B2B-C1F174B41C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F1ACF0-83D8-49F2-8B2B-C1F174B41C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F1ACF0-83D8-49F2-8B2B-C1F174B41C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F1ACF0-83D8-49F2-8B2B-C1F174B41C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
