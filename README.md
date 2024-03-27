@@ -9,10 +9,10 @@ Hamming codes are fundamental in telecommunications, computer memory systems, an
 ## Screenshots
 
 ### Encoding Example
-![Encoding Example](screenshots/encoding_example.png)
+![Encoding Example](Screenshots/Encrypt.png)
 
 ### Decoding Example
-![Decoding Example](screenshots/decoding_example.png)
+![Decoding Example](Screenshots/Decode.png)
 
 ## Features
 
